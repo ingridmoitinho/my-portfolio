@@ -1,0 +1,668 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --light-blue: #bbdae9;
+    --purple: #8458B3;
+    --color-text: #083e74;
+    --gradient: linear-gradient(to right top, #eec3db, #e4bdde, #d7b8e3, #c7b5e7, #b2b2ea, #a1b7ef, #8fbcf1, #7dc0f1, #76cbf0, #79d5ec, #83dde6, #94e5df);
+}
+
+body {
+    background: #e1e1f1;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ------------------------------ Section Menu -------------------------------*/
+.header__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    border-bottom: 1px solid #abc0d5;
+    box-shadow: 0 0.1rem 0.5rem #89a9c8;
+}
+
+.logo {
+    max-width: 12rem;
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.menu__list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__list__item a {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--purple);
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.menu__list__item a:hover {
+    color: white;
+}
+
+/* Menu hambúrguer oculto no desktop */
+.menu__toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu__toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--purple);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* ------------------------------ Section Banner ------------------------------*/
+.banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 60%;
+    height: 70vh;
+    margin-bottom: 10rem;
+}
+
+.banner__title {
+    font-size: 2.5rem;
+    color: var(--purple);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.banner__subtitle {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: var(--color-text);
+    text-align: center;
+}
+
+.banner__image {
+    width: 22rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.banner__list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.banner__list__link {
+    background: var(--gradient);
+    box-shadow: 0 0.1rem 0.5rem #89a9c8;
+    border-radius: 7rem;
+}
+
+.banner__list__link a {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: var(--purple);
+    border-radius: 0.7rem;
+    gap: 0.2rem;
+}
+
+.banner__list__link a:hover {
+    background-color: var(--purple);
+    color: white;
+}
+
+/* ------------------------------ Section About me ----------------------------------*/
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--light-blue);
+    margin: 2rem auto;
+    width: 65%;
+    box-shadow: 0 0.1rem 0.5rem #89a9c8;
+    border-radius: 7rem;
+    padding: 3rem;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.title a {
+    text-decoration: none;
+    color: var(--purple);
+}
+
+.title a:active {
+    color: white;
+}
+
+.fa-bluesky {
+    color: #5ab3ce;
+    font-size: 2rem;
+}
+
+.about__text {
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 2;
+    text-align: center;
+    max-width: 90%;
+}
+
+.about__text span {
+    color: var(--purple);
+    font-weight: 400;
+}
+
+/*------------------------------ Section Skills/Hobbies ------------------------------*/
+.skills,
+.hobbies {
+    text-align: center;
+    padding: 2.5rem;
+    margin: 2rem auto;
+    max-width: 60%;
+    height: 25rem;
+    margin-bottom: 3rem;
+}
+
+.skills__list,
+.hobbies__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-content: center;
+    padding: 0;
+}
+
+.skills__item,
+.hobbies__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    transition: transform 0.3s;
+}
+
+.skills__item:hover,
+.hobbies__item:hover {
+    transform: scale(1.1);
+}
+
+.skills__icon,
+.hobbies__icon {
+    width: 3rem;
+}
+
+.skills__item__text,
+.hobbies__item__text {
+    font-size: 1rem;
+    color: var(--purple);
+}
+
+/*------------------------------ Section Projects --------------------------------*/
+.projects {
+    padding: 3rem;
+}
+
+.projects__container__desktop {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 2rem;
+    margin: 4rem 2rem;
+}
+
+.projects__container {
+    position: relative;
+    background: var(--gradient);
+    opacity: 0.85;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 0.1rem 0.5rem #89a9c8;
+    transition: transform 0.3s;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.projects__container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(145, 110, 182, 0.233);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.projects__container:hover {
+    transform: scale(1.05);
+}
+
+.projects__container:hover::after {
+    opacity: 1;
+}
+
+.projects__image {
+    width: 100%;
+    height: 45%;
+    border-radius: 0.7rem;
+}
+
+.projects__container__content {
+    padding-top: 1rem;
+}
+
+.projects__content__title {
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--purple);
+}
+
+.projects__content__text {
+    text-align: justify;
+    font-size: 0.85em;
+    color: var(--color-text);
+    padding: 0.5em 0;
+}
+
+#tecnologias {
+    font-weight: 500;
+    color: var(--purple);
+}
+
+#links {
+    display: flex;
+    justify-content: center;
+}
+
+.projects__content__link {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    text-transform: uppercase;
+    color: var(--purple);
+    background: var(--gradient);
+    border-radius: 7rem;
+    box-shadow: 0 0.1rem 0.5rem #89a9c8;
+    transition: transform 0.2s;
+}
+
+.projects__content__link:hover {
+    transform: scale(1.05);
+    background: var(--purple);
+    color: white;
+}
+
+/*------------------------------ Section Contact ---------------------------------*/
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 4rem 2rem;
+    padding-top: 2rem;
+    border-top: 1.5px solid #a2e4ec; 
+}
+
+.contact__container {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.contact__content__image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    padding: 1rem;
+}
+
+.contact__content__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    padding-top: 1rem;
+}
+
+.contact__content__logo {
+    width: 2rem;
+}
+
+.contact__form {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 8px 4px rgba(23, 63, 173, 0.25);
+    background: var(--light-blue);
+    margin-top: 5rem;
+}
+
+.contact__form__title {
+    font-weight: 600;
+    padding-bottom: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--purple);
+}
+
+.contact__form__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact__form__link {
+    background-color: transparent;
+    text-decoration: none;
+    resize: none;
+    border: none;
+    border-bottom: 1.5px solid #81d2dd;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact__form__link::placeholder {
+    font-family: var(--poppins);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--purple);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+    border-bottom-color: var(--purple);
+}
+
+.contact__form__submit {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.contact__form__button {
+    font-size: 0.75em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--purple);
+    width: 8rem;
+    padding: 0.75rem;
+    background: var(--gradient);
+    border: none;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, 0.2s ease, color 0.2s ease;
+}
+
+.contact__form__button:hover {
+    transform: scale(1.1);
+    background: var(--purple);
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    color: var(--purple);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.footer .fa-bluesky {
+    color: #5ab3ce;
+    font-size: 1rem;
+}
+
+.footer__text a {
+    color: #5ab3ce;
+    text-decoration: underline;
+}
+
+/* ------------------------------ Responsive Design ------------------------------*/
+@media (max-width: 1024px) {
+    .menu__list {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        background-color: var(--light-blue);
+        width: 200px;
+        flex-direction: column;
+        text-align: center;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.1rem 0.5rem #89a9c8;
+    }
+
+    .menu__list.active {
+        display: flex;
+    }
+
+    .menu__list__item {
+        padding: 1rem 0;
+        border-bottom: 1px solid #abc0d5;
+    }
+
+    .menu__list__item:last-child {
+        border-bottom: none;
+    }
+
+    .menu__toggle {
+        display: flex;
+    }
+
+    .banner {
+        flex-direction: column;
+        max-width: 90%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .banner__image {
+        order: -1;
+        width: 15rem;
+        margin-bottom: 2rem;
+    }
+
+    .banner__title {
+        font-size: 2rem;
+    }
+
+    .about {
+        width: 90%;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .skills,
+    .hobbies {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .skills__list,
+    .hobbies__list {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .projects__container__desktop {
+        grid-template-columns: 1fr;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 1rem;
+    }
+
+    .contact__form {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__container {
+        padding: 1.5rem;
+    }
+
+    .logo {
+        max-width: 6rem;
+    }
+
+    .banner {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .banner__title {
+        font-size: 1rem;
+    }
+
+    .banner__subtitle {
+        font-size: 0.8rem;
+    }
+
+    .banner__image {
+        width: 8rem;
+    }
+
+    .banner__list__link a {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .about,
+    .skills,
+    .hobbies {
+        width: 90%;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .about__text {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .projects {
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .projects__container__desktop {
+        max-width: 95%;
+    }
+
+    .projects__container {
+        padding: 0.8rem;
+    }
+
+    .projects__content__title {
+        font-size: 0.9rem;
+    }
+
+    .projects__content__link {
+        font-size: 0.6rem;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact {
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .contact__container a {
+        font-size: 1.5rem;
+    }
+
+    .contact__content__logo {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .contact__content__image {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+
+    .contact__form {
+        padding: 1.5rem;
+    }
+}
