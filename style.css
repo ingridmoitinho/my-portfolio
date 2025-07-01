@@ -343,7 +343,7 @@ a {
     gap: 2rem;
     margin: 4rem 2rem;
     padding-top: 2rem;
-    border-top: 1.5px solid #a2e4ec; 
+    border-top: 1.5px solid #a2e4ec;
 }
 
 .contact__container {
@@ -664,5 +664,103 @@ input:focus {
 
     .contact__form {
         padding: 1.5rem;
+    }
+}
+
+/* ------------------------------ Dark Mode Styles ------------------------------ */
+#darkModeToggle {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #5ab3ce;
+    transition: transform 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    transform: scale(1.1);
+}
+
+body.dark-mode {
+    --light-blue: #2a3b4a;
+    --purple: #a978d3;
+    --color-text: #e1e1e1;
+    --gradient: linear-gradient(to right top, #5c4a56, #58465b, #514361, #474167, #37406d);
+    background: #121212;
+    color: var(--color-text);
+}
+
+body.dark-mode .header__container {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .menu__list__item a {
+    color: var(--purple);
+}
+
+body.dark-mode .menu__list__item a:hover {
+    color: #ffffff;
+}
+
+body.dark-mode .banner__title {
+    color: var(--purple);
+}
+
+body.dark-mode .banner__list__link a:hover {
+    background-color: var(--purple);
+    color: #121212;
+}
+
+body.dark-mode .about {
+    background: #1e1e1e;
+    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .title a {
+    color: var(--purple);
+}
+
+body.dark-mode .about__text {
+    color: var(--color-text);
+}
+
+body.dark-mode .skills__item__text,
+.hobbies__item__text {
+    color: var(--purple);
+}
+
+body.dark-mode .projects__container {
+    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .projects__content__text {
+    color: var(--color-text);
+}
+
+body.dark-mode .contact__form {
+    background: #1e1e1e;
+    box-shadow: 0 0 8px 4px rgba(178, 178, 234, 0.15);
+}
+
+body.dark-mode .contact__form__link {
+    color: var(--color-text);
+    border-bottom: 1.5px solid #444;
+}
+
+body.dark-mode .contact__form__link::placeholder {
+    color: var(--purple);
+    opacity: 0.7;
+}
+
+body.dark-mode .footer {
+    color: var(--purple);
+}
+
+@media (max-width: 1024px) {
+    body.dark-mode .menu__list {
+        background-color: #2c2c2c;
+        border-bottom: 1px solid #444;
     }
 }
